@@ -28,7 +28,7 @@ from sklearn.externals.joblib import Parallel, delayed, logger
 from sklearn.externals.six import with_metaclass
 from sklearn.externals.six.moves import zip
 from sklearn.metrics.scorer import check_scoring
-
+from .partition import _check_cv
 
 def cross_val_score(estimator, X, y=None, scoring=None, cv=None, n_jobs=1,
                     verbose=0, fit_params=None, score_func=None,
