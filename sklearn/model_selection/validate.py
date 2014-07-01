@@ -11,22 +11,15 @@ The :mod:`sklearn.model_selection.validate` module includes
 from __future__ import print_function
 from __future__ import division
 
-import warnings
-from itertools import chain, combinations
-from math import ceil, floor, factorial
 import numbers
 import time
-from abc import ABCMeta, abstractmethod
 
 import numpy as np
-import scipy.sparse as sp
 
 from sklearn.base import is_classifier, clone
 from sklearn.utils import check_arrays, check_random_state, safe_mask
 from sklearn.utils.validation import _num_samples
 from sklearn.externals.joblib import Parallel, delayed, logger
-from sklearn.externals.six import with_metaclass
-from sklearn.externals.six.moves import zip
 from sklearn.metrics.scorer import check_scoring
 from .partition import _check_cv
 

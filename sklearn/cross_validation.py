@@ -12,22 +12,10 @@ from __future__ import print_function
 from __future__ import division
 
 import warnings
-from itertools import chain, combinations
-from math import ceil, floor, factorial
+from math import ceil
 import numbers
-import time
-from abc import ABCMeta, abstractmethod
 
-import numpy as np
-import scipy.sparse as sp
-
-from .base import is_classifier, clone
-from .utils import check_arrays, check_random_state, safe_mask
-from .utils.validation import _num_samples
-from .externals.joblib import Parallel, delayed, logger
-from .externals.six import with_metaclass
-from .externals.six.moves import zip
-from .metrics.scorer import check_scoring
+from .utils import check_random_state
 
 from .model_selection.partition import LeaveOneOut, LeavePOut, KFold, \
         StratifiedKFold, LeaveOneLabelOut, LeavePLabelOut, \
