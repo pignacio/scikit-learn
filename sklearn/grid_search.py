@@ -12,8 +12,8 @@ from __future__ import print_function
 
 #TODO: add deprecation warning to this module
 
-from sklearn.model_selection.search import GridSearchCV, RandomizedSearchCV
-from sklearn.model_selection.utils import ParameterGrid, ParameterSampler, \
+from .model_selection.search import GridSearchCV, RandomizedSearchCV
+from .model_selection.utils import ParameterGrid, ParameterSampler, \
         fit_grid_point
 
 __all__ = ['GridSearchCV', 'ParameterGrid', 'fit_grid_point',
