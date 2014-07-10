@@ -253,6 +253,7 @@ class _BaseKFold(with_metaclass(ABCMeta, _PartitionIterator)):
         if not isinstance(shuffle, bool):
             raise TypeError("shuffle must be True or False;"
                             " got {0}".format(shuffle))
+
         self.shuffle = shuffle
         self.random_state = random_state
 
@@ -728,13 +729,17 @@ train_test_split.__test__ = False  # to avoid a pb with nosetests
 class BaseShuffleSplit(with_metaclass(ABCMeta)):
     """Base class for ShuffleSplit and StratifiedShuffleSplit"""
 
-    def __init__(self, n, n_iter=10, test_size=0.1, train_size=None,
+    def __init__(self, n=None, n_iter=10, test_size=0.1, train_size=None,
                  indices=None, random_state=None, n_iterations=None):
         if indices is None:
             indices = True
         else:
             warnings.warn("The indices parameter is deprecated and will be "
                           "removed (assumed True) in 0.17", DeprecationWarning)
+        if n is not None:
+            warnings.warn("The n parameter is deprecated and will be "
+                          "removed (use split method instead)",
+                          DeprecationWarning, stacklevel=1)
         self.n = n
         self.n_iter = n_iter
         if n_iterations is not None:  # pragma: no cover
