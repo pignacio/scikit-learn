@@ -17,10 +17,10 @@ import numbers
 
 from .utils import check_random_state
 
-from .model_selection.partition import LeaveOneOut, LeavePOut, KFold, \
-        StratifiedKFold, LeaveOneLabelOut, LeavePLabelOut, \
-        ShuffleSplit, StratifiedShuffleSplit, train_test_split, check_cv
-from .model_selection.validate import cross_val_score, permutation_test_score
+from .model_selection import LeaveOneOut, LeavePOut, KFold, StratifiedKFold
+from .model_selection import LeaveOneLabelOut, LeavePLabelOut, ShuffleSplit
+from .model_selection import StratifiedShuffleSplit, train_test_split, check_cv
+from .model_selection import cross_val_score, permutation_test_score
 
 __all__ = ['Bootstrap',
            'KFold',

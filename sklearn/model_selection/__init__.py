@@ -1,8 +1,8 @@
-from .partition import LeaveOneOut, LeavePOut, KFold, \
-        StratifiedKFold, LeaveOneLabelOut, LeavePLabelOut, \
-        ShuffleSplit, StratifiedShuffleSplit, train_test_split, check_cv
-from .validate import cross_val_score, permutation_test_score, \
-        learning_curve, validation_curve
+from .partition import LeaveOneOut, LeavePOut, KFold, StratifiedKFold
+from .partition import LeaveOneLabelOut, LeavePLabelOut, ShuffleSplit
+from .partition import StratifiedShuffleSplit, train_test_split, check_cv
+from .validate import cross_val_score, permutation_test_score
+from .validate import learning_curve, validation_curve
 from .search import GridSearchCV, RandomizedSearchCV
 from .utils import ParameterGrid, ParameterSampler, fit_grid_point
 
